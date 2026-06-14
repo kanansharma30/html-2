@@ -4,31 +4,64 @@ body{
     margin: 0;
     background-color: #0d0d0d;
     color: #f5f5f5;
+    text-align: center;
 }
 
-/* HEADER */
+/* Skip link for accessibility */
+.skip-link{
+    position: absolute;
+    left: -999px;
+    background: white;
+    color: black;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.skip-link:focus{
+    left: 10px;
+    top: 10px;
+}
+
+/* Top section of page */
 header{
     background: linear-gradient(90deg, #111111, #1f1f1f);
     padding: 25px;
-    text-align: center;
     border-bottom: 3px solid #00ffff;
+    text-align: center;
 }
 
-/* NAVIGATION */
+/* Navigation area */
 nav{
     background-color: #151515;
     padding: 15px;
+    width: 80%;
+    margin: 0 auto;
+    display: inline-block;
     text-align: center;
 }
 
-/* NAV ITEMS */
+/* Old list styling kept as comment for assignment requirement */
+/*
 li{
     display: inline-block;
     width: 140px;
     list-style-type: none;
 }
+*/
 
-/* NAV LINKS */
+/* Fixing navigation layout */
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+/* Navigation links */
 nav a{
     color: #00ffff;
     text-decoration: none;
@@ -41,15 +74,24 @@ nav a:hover{
     text-shadow: 0px 0px 8px #ff00ff;
 }
 
-/* MAIN CONTENT */
+/* Styling only images inside nav */
+nav img{
+    width: 120px;
+    display: block;
+    margin: 0 auto 15px auto;
+    border-radius: 10px;
+}
+
+/* Main content section */
 main{
     background-color: #1a1a1a;
     font-size: 20px;
     padding: 30px;
     min-height: 400px;
+    text-align: left;
 }
 
-/* HEADING */
+/* Main heading */
 h1{
     text-align: center;
     font-family: Verdana, sans-serif;
@@ -58,13 +100,13 @@ h1{
     text-shadow: 0px 0px 10px #00ffff;
 }
 
-/* PARAGRAPHS */
+/* Paragraph text */
 p{
     line-height: 1.8;
     margin-bottom: 20px;
 }
 
-/* FOOTER */
+/* Footer area */
 footer{
     background-color: #111111;
     color: #cccccc;
@@ -73,7 +115,7 @@ footer{
     border-top: 2px solid #00ffff;
 }
 
-/* GAMING CARD STYLE */
+/* Card style sections */
 section{
     background-color: #222222;
     padding: 20px;
@@ -83,7 +125,7 @@ section{
     box-shadow: 0px 0px 10px rgba(0,255,255,0.2);
 }
 
-/* BUTTON STYLE */
+/* Buttons */
 button{
     background-color: #00ffff;
     color: black;
@@ -97,4 +139,33 @@ button{
 button:hover{
     background-color: #ff00ff;
     color: white;
+}
+
+/* Grid layout for images */
+.grid{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: space-evenly;
+    align-items: center;
+    row-gap: 20px;
+}
+
+/* Images inside grid */
+.grid img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Flex layout section */
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Images inside flex layout */
+.flex img{
+    width: 250px;
+    margin: 10px;
+    border-radius: 10px;
 }
